@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fae5e1;
+    padding: 20px;
+}
+
+.container {
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Borde a toda la tabla */
+table, td {
+    border: 2px solid #333;
+    border-collapse: collapse;
+}
+
+/* tamañop y alineación */
+td {
+    width: 80px;
+    height: 50px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Color general de todas las celdas */
+td {
+    background-color: #d1e7ff;
+}
+
+/* Segunda fila */
+tr:nth-child(2) td {
+    background-color: #ffeb99;
+}
+
+/* Tercera columna */
+td:nth-child(3) {
+    background-color: #ffc4c4;
+}
+
+/* primera y ultima celda */
+tr:first-child td:first-child,
+tr:last-child td:last-child {
+    background-color: #a3e4a3;
+}
+
+/* Intersección: segunda fila + tercera columna */
+tr:nth-child(2) td:nth-child(3) {
+    background-color: #ff7b00; 
+    color: white;
+}
+
+/* Intersección: tercera fila y segungda columna */
+tr:nth-child(3) td:nth-child(2) {
+    background-color: #8b5cf6;
+    color: white;
+}
+
+td {
+    transition: 0.3s ease;
+}
+
+/* Hover general */
+td:hover {
+    outline: 3px solid #1a3d7c;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+/* Acá le agregue un efecto extra cuando clickeo una celda*/
+td:active {
+    transform: scale(0.95);
+    opacity: 0.7;
+}
