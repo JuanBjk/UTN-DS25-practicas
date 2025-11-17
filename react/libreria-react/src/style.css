@@ -1,96 +1,129 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* reset simple */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
+/* estilos base */
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.contenedor {
+    max-width: 1000px;
+    margin: auto;
+    background: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* cabecera */
+.cabecera {
+    background-image: url('../img/header.jpg');
+    background-size: cover;
+    padding: 20px;
+    color: rgb(211, 90, 90);
+    text-shadow: 1px 1px 2px black;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
+/* menu principal */
+.menu {
+    background: #1d3557;
+    padding: 10px;
 }
 
-.card {
-  padding: 2em;
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: bold;
 }
 
-.read-the-docs {
-  color: #888;
+.menu a:hover {
+    text-decoration: underline;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+/* contenido */
+.contenido {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+/* tarjetas para libros */
+.tarjeta {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 15px;
+    width: 220px;
+    margin: 10px;
+    background-color: #fafafa;
+}
+
+.lista-libros {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* pie */
+.pie {
+    background: #1d3557;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.menu button {
+  background: none;
+  border: none;
+  color: white;
+  padding: 10px 15px;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  font-size: 1rem;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.menu button:hover {
+  background-color: #457b9d;
+}
+
+.tarjeta img {
+  width: 200px;
+  height: 280px;
+  object-fit: cover; /* evita deformaciones */
+  border-radius: 6px; /* opcional, para diseño más lindo */
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 300px;
+}
+
+.formulario input,
+.formulario select {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.formulario button {
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #1d3557;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.formulario button:hover {
+  background-color: #457b9d;
+}
+.contenido p {
+  font-size: 18px;
+  margin: 8px 0;
 }
